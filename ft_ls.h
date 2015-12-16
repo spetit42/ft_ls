@@ -19,6 +19,7 @@
 #include <pwd.h>
 
 void    sort_list(t_list *list);
+void    sort_rev_list(t_list *list);
 void	ft_print_list(t_list *list);
 
 #endif

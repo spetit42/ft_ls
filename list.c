@@ -55,3 +55,26 @@ void    sort_list(t_list *list)
         }
     }
 }
+
+void    sort_rev_list(t_list *list)
+{
+  t_list        *tmp;
+  static int state = 1;
+ 
+  while (state != 0)
+    {
+      state = 0;
+      tmp = list;
+      while (tmp->next != NULL)
+        {
+          if (ft_strcmp((tmp->content),(tmp->next->content)) < 0)
+            {
+              swap_element(tmp, tmp->next);
+              state++;
+              tmp = tmp->next;
+            }
+          else
+            tmp = tmp->next;
+        }
+    }
+}
